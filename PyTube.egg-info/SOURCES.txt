@@ -1,0 +1,7 @@
+setup.py
+PyTube.egg-info/PKG-INFO
+PyTube.egg-info/SOURCES.txt
+PyTube.egg-info/dependency_links.txt
+PyTube.egg-info/entry_points.txt
+PyTube.egg-info/requires.txt
+PyTube.egg-info/top_level.txt
