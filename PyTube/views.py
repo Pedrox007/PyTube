@@ -100,23 +100,23 @@ def rank(request):
         if vid["theme"] == "Music": 
             themeMusic[0] += vid["likes"]
             themeMusic[1] += vid["dislikes"]
-            themeMusic[2] += (vid["likes"]-vid["dislikes"])/2
+            themeMusic[2] += vid["likes"]-(vid["dislikes"]/2)
         elif vid["theme"] == "Games": 
             themeGames[0] += vid["likes"]
             themeGames[1] += vid["dislikes"]
-            themeGames[2] += (vid["likes"]-vid["dislikes"])/2
+            themeGames[2] += vid["likes"]-(vid["dislikes"]/2)
         elif vid["theme"] == "Art": 
             themeArt[0] += vid["likes"]
             themeArt[1] += vid["dislikes"]
-            themeArt[2] += (vid["likes"]-vid["dislikes"])/2
+            themeArt[2] += vid["likes"]-(vid["dislikes"]/2)
         elif vid["theme"] == "Critic": 
             themeCritic[0] += vid["likes"]
             themeCritic[1] += vid["dislikes"]
-            themeCritic[2] += (vid["likes"]-vid["dislikes"])/2
+            themeCritic[2] += vid["likes"]-(vid["dislikes"]/2)
         elif vid["theme"] == "News": 
             themeNews[0] += vid["likes"]
             themeNews[1] += vid["dislikes"]
-            themeNews[2] += (vid["likes"]-vid["dislikes"])/2
+            themeNews[2] += vid["likes"]-(vid["dislikes"]/2)
     
     rank.append({"theme": "Music","likes": themeMusic[0], "dislikes": themeMusic[1], "score": themeMusic[2]})
     rank.append({"theme": "Games","likes": themeGames[0], "dislikes": themeGames[1], "score": themeGames[2]})
